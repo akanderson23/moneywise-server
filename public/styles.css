@@ -1,0 +1,166 @@
+/* same colors as the MoneyWise react site */
+:root {
+    --navy: #0B2240;
+    --gold: #C5A85C;
+    --cream: #FBF9F5;
+    --white: #FFFFFF;
+    --border: #EAE6DF;
+    --body-text: #505E70;
+    --light-text: #C3CDDA;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Geist', Arial, Helvetica, sans-serif;
+    background-color: var(--cream);
+    color: var(--body-text);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    color: var(--navy);
+    margin: 0;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 40px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    margin: 0;
+}
+
+code {
+    font-family: Consolas, Monaco, monospace;
+    color: var(--navy);
+    font-size: 14px;
+}
+
+/* Header */
+header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    color: var(--navy);
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Hero */
+#hero {
+    background-color: var(--navy);
+    color: var(--light-text);
+    font-size: 18px;
+    padding: 64px 0;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+/* Requests */
+#requests {
+    padding: 64px 0 40px;
+}
+
+.request {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    color: inherit;
+    padding: 28px;
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.request:hover {
+    border-color: var(--gold);
+    box-shadow: 0 4px 16px rgba(11, 34, 64, 0.08);
+}
+
+.request code {
+    display: block;
+    margin: 4px 0 12px;
+}
+
+.method {
+    background-color: var(--gold);
+    border-radius: 6px;
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+}
+
+/* Fields */
+#fields {
+    padding-bottom: 64px;
+}
+
+#fields a {
+    color: var(--navy);
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    background-color: var(--navy);
+    padding: 32px 0;
+    text-align: center;
+}
+
+footer a {
+    color: var(--white);
+    font-weight: 500;
+}
+
+@media (max-width: 500px) {
+    .request {
+        flex-direction: column;
+        gap: 12px;
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+}

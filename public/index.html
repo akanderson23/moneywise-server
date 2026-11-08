@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyWise API</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Outfit:wght@600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="https://akanderson23.github.io/moneywise-react/" class="logo">
+                <img src="images/icon-chart-line.svg" alt="">
+                MoneyWise
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <p class="eyebrow">Developer Docs</p>
+                <h1>MoneyWise API</h1>
+                <p>This server provides the course catalog for the MoneyWise website. Choose a request below to see the data it returns.</p>
+            </div>
+        </section>
+
+        <section id="requests">
+            <div class="container">
+                <h2>Available Requests</h2>
+                <a href="/api/courses" class="request">
+                    <span class="method">GET</span>
+                    <div>
+                        <h3>All Courses</h3>
+                        <code>/api/courses</code>
+                        <p>Returns every course as JSON, including its title, category, instructor, length, level, and image.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="fields">
+            <div class="container">
+                <h2>Course Images</h2>
+                <p>Each course has an <code>img_name</code> such as <a href="/images/course-budgeting.svg">images/course-budgeting.svg</a>. Add it to the end of this server's address to load the picture.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="https://akanderson23.github.io/moneywise-react/">Visit the MoneyWise Website</a>
+        </div>
+    </footer>
+</body>
+</html>
