@@ -111,7 +111,7 @@ header {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.request:hover {
+a.request:hover {
     border-color: var(--gold);
     box-shadow: 0 4px 16px rgba(11, 34, 64, 0.08);
 }
@@ -129,6 +129,30 @@ header {
     font-weight: 600;
     letter-spacing: 0.5px;
     padding: 4px 10px;
+}
+
+.request + .request {
+    margin-top: 16px;
+}
+
+.method.post {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.rules {
+    display: grid;
+    gap: 8px;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+    list-style-type: none;
+    padding: 16px 0 0;
+    margin: 16px 0 0;
+}
+
+.rules code {
+    display: inline;
+    margin: 0 6px 0 0;
 }
 
 /* Fields */

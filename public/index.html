@@ -37,6 +37,23 @@
                         <p>Returns every course as JSON, including its title, category, instructor, length, level, and image.</p>
                     </div>
                 </a>
+                <div class="request">
+                    <span class="method post">POST</span>
+                    <div>
+                        <h3>Add a Course</h3>
+                        <code>/api/courses</code>
+                        <p>Send a new course as JSON. It is checked with Joi, then added to the list and returned with its new <code>_id</code> and image.</p>
+                        <ul class="rules">
+                            <li><code>title</code> 3 to 60 characters</li>
+                            <li><code>category</code> Budgeting, Investing, Debt, Retirement, or Taxes</li>
+                            <li><code>instructor</code> 3 to 60 characters</li>
+                            <li><code>duration</code> like 2h 30m</li>
+                            <li><code>lessons</code> whole number from 1 to 50</li>
+                            <li><code>level</code> Beginner, Intermediate, or Advanced</li>
+                            <li><code>description</code> 10 to 200 characters</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
