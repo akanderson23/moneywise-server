@@ -140,6 +140,16 @@ a.request:hover {
     color: var(--white);
 }
 
+.method.put {
+    background-color: #E7F4EA;
+    color: #1E6B34;
+}
+
+.method.delete {
+    background-color: #FBE9E7;
+    color: #A3271C;
+}
+
 .rules {
     display: grid;
     gap: 8px;

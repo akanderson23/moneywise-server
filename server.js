@@ -159,13 +159,46 @@ app.post("/api/courses", (req, res) => {
     return;
   }
 
+  //start at 1 if every course has been deleted
   const course = {
-    _id: Math.max(...courses.map((c) => c._id)) + 1,
+    _id: courses.reduce((max, c) => Math.max(max, c._id), 0) + 1,
     ...result.value,
     img_name: categoryImages[result.value.category],
   };
 
   courses.push(course);
+  res.status(200).send({ success: true, course });
+});
+
+app.put("/api/courses/:id", (req, res) => {
+  const course = courses.find((c) => c._id === parseInt(req.params.id));
+
+  if (!course) {
+    res.status(404).send({ success: false, message: "That course could not be found." });
+    return;
+  }
+
+  const result = validateCourse(req.body);
+
+  if (result.error) {
+    res.status(400).send({ success: false, message: result.error.details[0].message });
+    return;
+  }
+
+  //keep the same _id, but update the picture in case the category changed
+  Object.assign(course, result.value, { img_name: categoryImages[result.value.category] });
+  res.status(200).send({ success: true, course });
+});
+
+app.delete("/api/courses/:id", (req, res) => {
+  const index = courses.findIndex((c) => c._id === parseInt(req.params.id));
+
+  if (index === -1) {
+    res.status(404).send({ success: false, message: "That course could not be found." });
+    return;
+  }
+
+  const [course] = courses.splice(index, 1);
   res.status(200).send({ success: true, course });
 });
 

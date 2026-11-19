@@ -54,6 +54,22 @@
                         </ul>
                     </div>
                 </div>
+                <div class="request">
+                    <span class="method put">PUT</span>
+                    <div>
+                        <h3>Edit a Course</h3>
+                        <code>/api/courses/:id</code>
+                        <p>Send the course's updated details as JSON. They are checked with the same Joi rules as adding a course, then the course with that <code>_id</code> is updated and returned.</p>
+                    </div>
+                </div>
+                <div class="request">
+                    <span class="method delete">DELETE</span>
+                    <div>
+                        <h3>Delete a Course</h3>
+                        <code>/api/courses/:id</code>
+                        <p>Removes the course with that <code>_id</code> and returns the course that was deleted.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
